@@ -71,14 +71,15 @@ public class CollectionDemoActivity extends FragmentActivity {
         mViewPager.setAdapter(mDemoCollectionPagerAdapter);
     }
 
-    @Override
+/*    Not need after deleting MainActivity 
+  @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
                 // This is called when the Home (Up) button is pressed in the action bar.
                 // Create a simple intent that starts the hierarchical parent activity and
                 // use NavUtils in the Support Package to ensure proper handling of Up.
-                Intent upIntent = new Intent(this, MainActivity.class);
+              Intent upIntent = new Intent(this, MainActivity.class);
                 if (NavUtils.shouldUpRecreateTask(this, upIntent)) {
                     // This activity is not part of the application's task, so create a new task
                     // with a synthesized back stack.
@@ -95,7 +96,7 @@ public class CollectionDemoActivity extends FragmentActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
     /**
      * A {@link android.support.v4.app.FragmentStatePagerAdapter} that returns a fragment
@@ -138,7 +139,7 @@ public class CollectionDemoActivity extends FragmentActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_collection_object, container, false);
+            View rootView = inflater.inflate(R.layout.phonelayout, container, false);
             Bundle args = getArguments();
             ((TextView) rootView.findViewById(android.R.id.text1)).setText(
                     Integer.toString(args.getInt(ARG_OBJECT)));
